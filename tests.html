@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<article
+
+        data-index-number="12314"
+        data-parent="voitures">
+
+<p id="paragraph" data-align="center"> PapaTango</p>
+</article>
+
+<div  id="voitureelectrique"
+      data-background="blue"> lorem55</div>
+
+<div id="nuage" data-background="yellow">
+
+    <p> encore un test en ce jeudi nuageux!!</p>
+<p>test</p>
+</div>
+
+<p id="size" data-size="2.5em"> Taille de police </p>
+
+<script>
+    // Sélectionne l'élément avec l'ID "voitureelectrique"
+    const colorElement = document.getElementById("voitureelectrique");
+
+    // Récupère la valeur de l'attribut "data-background"
+    const backgroundColor = colorElement.getAttribute("data-background");
+
+    // Applique la couleur de fond à l'élément <body>
+    // document.body.style.backgroundColor = backgroundColor;
+
+    colorElement.style.backgroundColor=backgroundColor;
+
+    //  je récupère le paragraphe
+    const P_Element=document.getElementById('paragraph');
+    // je récupère l'attribut du paragraphe
+    const TextAlign=P_Element.getAttribute('data-align');
+    // je lui donne un style
+    P_Element.style.textAlign=TextAlign;
+
+const ColorTest=document.getElementById("nuage");
+const ChangeColorTest=ColorTest.getAttribute("data-background");
+ColorTest.style.backgroundColor=ChangeColorTest;
+
+const TextToResize=document.getElementById("size");
+const Resizing=TextToResize.getAttribute('data-size');
+TextToResize.style.fontSize=Resizing;
+</script>
+<!--<script>
+    // Sélectionne l'élément avec l'ID "voitureelectrique"
+    const color = document.getElementById("voitureelectrique");
+
+    // Récupère la valeur de l'attribut "blue"
+    const isBlue = color.getAttribute("data-background");
+
+    // Affiche la valeur de l'attribut "blue" dans la console
+    console.log(isBlue);
+
+</script>!-->
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+
+*,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+dialog::backdrop {
+    background-color: green; /* couleur de fond lorsque la modale est ouverte*/
+}
+dialog[open] /* ces propiétés sont éxécutés  UNIQUEMENT LOrsque dialogue est ouvert*/
+{
+    display: flex; /* display flex appliqué uniquement lorsque la modale est ouverte */
+    min-height: 100vh; /* pour que la modale prenne toute l'hauteur de la page. Elément placé à la base dans dialog tout court, je l'ai déplacé dans dialog car il la modale ne prenait plus toute l'hauteur de la page lorsque display flex a été mis en dialog open. Il reste le souci qu'il  y a enccore la barre de défilement qui appaarait*/
+
+}
+
+    h1
+{
+
+    text-align: left;
+}
+dialog
+{
+    position: absolute; /* position absolu càd mes éléments sont positionés par rapport à la page et nons au parent */
+    width: 25%; /* mon dialogue prends 25% de la largeur de la page*/
+    bottom: auto;
+    left: auto;
+    top:0 ;
+    right: 0;
+    /*Puisque j'ai dit que mon top et mon right sont en 0 càd auccun espace au  dessus et à gauche, je dit à mon bottom et à mon left de s'adapter sans forcément mettre de valeur*/
+
+    height: 100vh; /* toute la page comme hauteur */
+    flex-direction: column; /* je place mes éléments en colonnes , en verticale*/
+    justify-content: space-between; /*un espace égal entre mes éléments*/
+    padding: 0; /*j'initialise mon padding à 0 puisque par défaut le système me met un padding: problémaatique pour ma bordure*/
+
+}
+.dialog_header
+{
+    padding: 1rem; /* padding pour un peu plus d'espace sur les bord haut idem  tous les côtés et pour les autres div */
+}
+.dialog_maincontent
+{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: gray; /* bordures*/
+    flex-grow: 1; /* pour que le main content s'agrandit et prenne le restant de l'espace*/
+
+    padding: 1rem;
+}
+
+.dialog_footer
+{
+    padding: 1rem;
+
+}
