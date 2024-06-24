@@ -22,8 +22,5 @@
             }
         });
 
-
-        /*tesftconst test=document.getElementById('modtest')
-
-test.dataset.starsign="right";
-        console.log(test.dataset);*/
+const DialogWidht=dialog.getAttribute("data-widht");
+dialog.style.width=DialogWidht;

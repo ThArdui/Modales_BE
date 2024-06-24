@@ -22,12 +22,7 @@ dialog[open] /* ces propiétés sont éxécutés  UNIQUEMENT LOrsque dialogue es
 dialog
 {
     position: absolute; /* position absolu càd mes éléments sont positionés par rapport à la page et nons au parent */
-    width: 25%; /* mon dialogue prends 25% de la largeur de la page*/
-    bottom: auto;
-    left: auto;
-    top:0 ;
-    right: 0;
-    /*Puisque j'ai dit que mon top et mon right sont en 0 càd auccun espace au  dessus et à gauche, je dit à mon bottom et à mon left de s'adapter sans forcément mettre de valeur*/
+     /*Puisque j'ai dit que mon top et mon right sont en 0 càd auccun espace au  dessus et à gauche, je dit à mon bottom et à mon left de s'adapter sans forcément mettre de valeur*/
 
     height: 100vh; /* toute la page comme hauteur */
     flex-direction: column; /* je place mes éléments en colonnes , en verticale*/
@@ -35,6 +30,31 @@ dialog
     padding: 0; /*j'initialise mon padding à 0 puisque par défaut le système me met un padding: problémaatique pour ma bordure*/
 
 }
+
+.dialog_fullwidht
+{
+    max-width: none;
+    width: 100vw;
+}
+
+.dialog_sidepane_right
+{
+    bottom: auto;
+    left: auto;
+    top:0 ;
+    right: 0;
+    width: 25%;
+}
+
+.dialog_sidepane_left
+{
+    bottom: auto;
+    left: 0;
+    top:0 ;
+    right: auto;
+    width: 25%;
+}
+
 .dialog_header
 {
     padding: 1rem; /* padding pour un peu plus d'espace sur les bord haut idem  tous les côtés et pour les autres div */
