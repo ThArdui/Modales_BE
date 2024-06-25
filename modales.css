@@ -2,9 +2,15 @@
 *,
 *:before,
 *:after
+
 {
     box-sizing: border-box;
 }
+
+
+
+
+
 dialog::backdrop
 {
     background-color: beige;
@@ -29,10 +35,14 @@ dialog
     padding: 0;
 }
 
-.dialog_fullwidht
+
+
+.dialog_fullwidth
 {
-    max-width: none;
-    width: 100vw;
+
+
+            max-width: none;
+            width: 100vw;
 }
 
 .dialog_sidepane_right
@@ -41,7 +51,22 @@ dialog
     left: auto;
     top:0 ;
     right: 0;
+
     width: 25%;
+
+    @media screen (max-width:576px)
+    {
+    max-width: none;
+    width: 100vw;
+    }
+
+    @media screen (min-width:576px)
+   {
+    right: 25%;
+    left: 25%;
+    top: 0;
+    bottom: auto;
+    }
 }
 
 .dialog_sidepane_left
@@ -72,3 +97,4 @@ dialog
     padding: 1rem;
 
 }
+

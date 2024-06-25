@@ -21,6 +21,11 @@ dialog.addEventListener('click', function (event) {
         dialog.close();
     }
 });
-// setting of a data attribute in order to manage the width of the dialog easely
-const DialogWidht=dialog.getAttribute("data-width");
-dialog.style.width=DialogWidht;
+// if a data-attribute is present, activate a style on it  in order to manage the width of the dialog easely
+
+if (dialog.hasAttribute("data-width"))
+{
+    const DialogWidth=dialog.getAttribute("data-width");
+    dialog.style.width=DialogWidth;
+
+}
