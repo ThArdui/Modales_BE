@@ -1,26 +1,26 @@
-        // je récupre les éléments suivants via des sélecteur css: la modale (dialogue), le bouton qui suit juste la modale et le boutons de fermeture et je stcocke dans  des constantes
-        const dialog = document.querySelector("dialog");
-        const showButton = document.querySelector("dialog + button");
-        const closeButton = document.querySelector("dialog button");
+// capture of the several css  elements  and stock them in variables
+    const dialog = document.querySelector("dialog");
+    const showButton = document.querySelector("dialog + button");
+    const closeButton = document.querySelector("dialog button");
 
-        // j'ajoute un écouteur d'évenement au clic qui appelera la méthode show modal sur dialogue
-        showButton.addEventListener("click", () => {
+
+// additon of a JS event by click  wich will call the showModal function to open the dialog
+    showButton.addEventListener("click", () => {
             dialog.showModal();
         });
-
-        // même pricincipe mais pour fermer la modalde
-        closeButton.addEventListener("click", () => {
-            dialog.close();
+// same  schema but to close the  dialog
+ closeButton.addEventListener("click", () => {
+ dialog.close();
         });
-
-        dialog.addEventListener('click', function (event) {
-            var rect = dialog.getBoundingClientRect();
-            var isInDialog=(rect.top <= event.clientY && event.clientY <= rect.top + rect.height
-                && rect.left <= event.clientX && event.clientX <= rect.left + rect.width);
-            if (!isInDialog) {
-                dialog.close();
-            }
-        });
-
-const DialogWidht=dialog.getAttribute("data-widht");
+// closing the dialog by clicking outside it
+dialog.addEventListener('click', function (event) {
+    var rect = dialog.getBoundingClientRect();
+    var isInDialog=(rect.top <= event.clientY && event.clientY <= rect.top + rect.height
+        && rect.left <= event.clientX && event.clientX <= rect.left + rect.width);
+    if (!isInDialog) {
+        dialog.close();
+    }
+});
+// setting of a data attribute in order to manage the width of the dialog easely
+const DialogWidht=dialog.getAttribute("data-width");
 dialog.style.width=DialogWidht;
