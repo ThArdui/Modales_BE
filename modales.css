@@ -51,21 +51,11 @@ dialog
     left: auto;
     top:0 ;
     right: 0;
-
-    width: 25%;
-
-    @media screen (max-width:576px)
-    {
     max-width: none;
-    width: 100vw;
-    }
+    width: 100%;
 
-    @media screen (min-width:576px)
-   {
-    right: 25%;
-    left: 25%;
-    top: 0;
-    bottom: auto;
+    @media screen and (min-width: 576px){
+        width: 350px;
     }
 }
 
