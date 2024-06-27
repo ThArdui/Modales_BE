@@ -1,0 +1,21 @@
+
+.view-content
+{
+    @media screen and (min-width: 576px)
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+}
+.group_months
+{
+    font-weight: bolder;
+    text-transform:capitalize ;
+}
+
+details
+{
+border: none;
+}

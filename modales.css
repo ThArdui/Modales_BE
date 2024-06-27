@@ -2,15 +2,9 @@
 *,
 *:before,
 *:after
-
 {
     box-sizing: border-box;
 }
-
-
-
-
-
 dialog::backdrop
 {
     background-color: beige;
@@ -20,7 +14,6 @@ dialog[open]
     display: flex;
     min-height: 100vh;
 }
-
 h1
 {
 
@@ -34,17 +27,11 @@ dialog
     justify-content: space-between;
     padding: 0;
 }
-
-
-
 .dialog_fullwidth
 {
-
-
-            max-width: none;
-            width: 100vw;
+    max-width: none;
+    width: 100vw;
 }
-
 .dialog_sidepane_right
 {
     bottom: auto;
@@ -54,20 +41,23 @@ dialog
     max-width: none;
     width: 100%;
 
-    @media screen and (min-width: 576px){
+    @media screen and (min-width: 576px)
+    {
         width: 350px;
     }
 }
-
 .dialog_sidepane_left
 {
     bottom: auto;
     left: 0;
     top:0 ;
     right: auto;
-    width: 25%;
+    max-width: none;
+    @media screen and (min-width: 576px)
+    {
+        width: 350px;
+    }
 }
-
 .dialog_header
 {
     padding: 1rem;
@@ -78,13 +68,10 @@ dialog
     border-bottom: 1px solid;
     border-color: gray;
     flex-grow: 1;
-
     padding: 1rem;
 }
-
 .dialog_footer
 {
     padding: 1rem;
-
 }
 
