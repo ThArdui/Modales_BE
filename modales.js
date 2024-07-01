@@ -21,11 +21,24 @@ dialog.addEventListener('click', function (event) {
         dialog.close();
     }
 });
-// if a data-attribute is present, activate a style on it  in order to manage the width of the dialog easely
+
+// Windowsize check, if  a data-attribute is present and if the screen is bigger than 576px, apply of the data-width.If the screen is smaller than 576px, remove of the data-width attribute in order to give a 100% width to the dialog.
+
+Windowsize=window.innerWidth;
 
 if (dialog.hasAttribute("data-width"))
+
 {
-    const DialogWidth=dialog.getAttribute("data-width");
-    dialog.style.width=DialogWidth;
+if (Windowsize>576)
+{
+    const DialogWidth = dialog.getAttribute("data-width");
+    dialog.style.width = DialogWidth;
+}
+else
+{
+    dialog.removeAttribute("data-width");
+}
+
+
 
 }
