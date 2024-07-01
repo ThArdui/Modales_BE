@@ -19,6 +19,10 @@ h1
 
     text-align: left;
 }
+h2
+{
+    margin: 0;
+}
 dialog
 {
     position: absolute;
@@ -26,14 +30,9 @@ dialog
     flex-direction: column;
     justify-content: space-between;
     padding: 0;
+    border: none;
 }
-.closebutton_container
-{
-    position: absolute;
-    top: 2px;
-    right: 6px ;
 
-}
 .close_button
 {
     height: 2.75em;
@@ -70,6 +69,7 @@ dialog
     right: 0;
     max-width: none;
     width: 100%;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
 
     @media screen and (min-width: 576px)
     {
@@ -83,6 +83,7 @@ dialog
     top:0 ;
     right: auto;
     max-width: none;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
     @media screen and (min-width: 576px)
     {
         width: 350px;
@@ -90,7 +91,11 @@ dialog
 }
 .dialog_header
 {
-    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+
 }
 .dialog_maincontent
 {
