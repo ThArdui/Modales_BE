@@ -14,8 +14,11 @@
     font-weight: bolder;
     text-transform:capitalize ;
 }
-
+.view-grouping-header
+{
+    font-size:10em ;
+}
 details
 {
-border: none;
+    border: none;
 }
